@@ -44,7 +44,6 @@
 					// return the price as a decimal number with 2 decimal places
 					return Math.round(fBillTotal * 100.0) / 100.0;
 				};
-
 				// This function either turns on or off the row highlighting for vegetarian
 				// items (depending on the value of bShowVeg)
 				function highlightVegetarian(idTable, bShowVeg) {
@@ -66,7 +65,6 @@
 						};
 					};
 				};
-
 				// Utility function for getting the parent tag of a given tag
 				// but only of a certain type (i.e. a TR, a TABLE, etc.)
 				function getParentTag(oNode, sParentType) {
@@ -104,25 +102,25 @@
 						</tr>
 					</thead>
 					<tbody>
-						<xsl:for-each select="Answer">
+						<xsl:for-each select="//section">
 							<tr>
 								<td colspan="3">
-									<xsl:value-of select="Answer"/>
+									<xsl:value-of select="@name"/>
 								</td>
 							</tr>
-							<xsl:for-each select="Answer">
+							<xsl:for-each select="entry">
 								<tr>
 									<xsl:attribute name="vegetarian">
-										<xsl:value-of select="Answer"/>
+										<xsl:value-of select="boolean(@vegetarian)"/>
 									</xsl:attribute>
 									<td align="center">
 										<input name="item0" type="checkbox"/>
 									</td>
 									<td>
-										<xsl:value-of select="Answer"/>
+										<xsl:value-of select="item"/>
 									</td>
 									<td align="right">
-										<xsl:value-of select="Answer"/>
+										<xsl:value-of select="price"/>
 									</td>
 								</tr>
 							</xsl:for-each>
