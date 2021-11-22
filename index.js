@@ -3,7 +3,7 @@ const http = require('http'),
       express = require('express'),
       fs = require ('fs'),
       xmlParse = require('xslt-processor').xmlParse,
-      xsltProcess = require ('xslt-processor').xsltProcess,
+      xsltProcessor = require ('xslt-processor').xsltProcessor,
       xml2js = require('xml2js');
 
 const router = express();

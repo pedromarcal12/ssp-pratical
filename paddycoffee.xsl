@@ -19,7 +19,7 @@
 				<script><![CDATA[
 				var gEntreeCount = 0;
 				// returns a number that represents the sum of all the selected menu
-				// item prices.
+				// item prices
 				function calculateBill(idMenuTable) {
 					var fBillTotal = 0.0;
 					var i = 0;
