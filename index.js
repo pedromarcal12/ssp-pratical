@@ -13,8 +13,8 @@ router.get('/', function(req, res) {
 
     res.writeHead(200, {'Content-Type' : 'text/html'});
 
-    let xml = fs.readFileSync('PaddysCafe.xml', 'utf8'),
-        xsl = fs.readFileSync('PaddysCafe.xsl', 'utf8');
+    let xml = fs.readFileSync('paddycoffee.xml', 'utf8'),
+        xsl = fs.readFileSync('paddycoffee.xml', 'utf8');
 
     let doc = xmlParse(xml),
         stylesheet = xmlParse(xml);
